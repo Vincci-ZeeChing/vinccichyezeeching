@@ -12,8 +12,8 @@ function Homepage() {
         <p className="frontend">Frontend Developer |</p>
         <p className="tag">Google Project – Tag Implementation Specialist</p>
       </div>
-      <div className="circle1"></div>
-      <div className="circle2"></div>
+      {/*<div className="circle1"></div>*/}
+      {/*<div className="circle2"></div>*/}
       <img
         src={Vincci} // change path to your actual image
         alt="Vincci"

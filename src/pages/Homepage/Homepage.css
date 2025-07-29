@@ -1,109 +1,89 @@
-/* Container */
 .homepage {
     position: relative;
-    width: 100%;
-    height: 95vh;
-    overflow: hidden;
-}
-
-/* Circles - responsive positioning */
-.circle1 {
-    position: absolute;
-    width: 60vw;
-    height: 60vw;
-    max-width: 923px;
-    max-height: 944px;
-    right: -13vw;
-    top: 10vh;
-    background: #D9D9D9;
-    border-radius: 50%;
-    z-index: -1;
-}
-
-.circle2 {
-    position: absolute;
-    width: 45vw;
-    height: 45vw;
-    max-width: 714px;
-    max-height: 769px;
-    right: -8vw;
-    top: 5vh;
-    background: #F2F4F7;
-    border-radius: 50%;
-    z-index: -1;
-}
-
-.profileImage {
-    position: absolute;
-    bottom: 0; /* distance from bottom */
-    right: 0; /* distance from right */
-    width: 570px; /* or adjust as needed */
-    height: auto;
-    z-index: 0;
-    object-fit: cover;
-}
-
-
-/* Name card wrapper */
-.nameCard {
-    font-family: 'Inter', serif;
-    font-style: normal;
     display: flex;
-    flex-direction: column;
-    color: #000000;
-    gap: 1rem;
-
-    position: absolute;
-    top: 35%;
-    left: 3%;
-    transform: translateY(-50%);
-    max-width: 80%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 5vw;
+    height: 80vh;           /* fixed height */
+    overflow: hidden;        /* hides any part of circle below the bottom */
 }
 
-/* Remove default p spacing */
-.hey,
-.vincci,
-.frontend,
-.tag,
-.circle1,
-.circle2 {
+.nameCard {
+    max-width: 50%;
+    z-index: 1;
+}
+
+.nameCard p,
+.nameCard h1,
+.nameCard h2 {
     margin: 0;
     padding: 0;
+    line-height: 1.5;
 }
 
-/* Responsive text sizes */
 .hey {
     font-weight: 100;
     font-size: clamp(16px, 3vw, 25px);
-    line-height: 1.2;
 }
 
 .vincci {
     font-weight: 800;
     font-size: clamp(36px, 8vw, 80px);
-    line-height: 1.1;
 }
 
 .frontend {
     font-weight: 400;
     font-size: clamp(24px, 5vw, 50px);
-    line-height: 1.2;
 }
 
 .tag {
     font-weight: 400;
     font-size: clamp(18px, 4vw, 35px);
-    line-height: 1.2;
 }
 
-@media (max-width: 500px) {
-    .circle1,
-    .circle2 {
-        display: none;
+/* Right profile image */
+.profileImage {
+    width: clamp(200px, 50vw, 700px);  /* 📱 < 🖥️ Smooth scaling */
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .homepage {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: auto;
+        padding: 2rem 5vw;
     }
 
     .nameCard {
-        left: 5%;
-        top: 40%;
+        max-width: 100%;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .profileImage {
+        position: static;
+        margin-top: 2rem;
+        width: 100%;
+        max-width: 300px; /* 👈 smaller size on mobile */
+        height: auto;
+    }
+
+    .vincci {
+        font-size: clamp(28px, 8vw, 48px);
+    }
+
+    .frontend {
+        font-size: clamp(18px, 6vw, 32px);
+    }
+
+    .tag {
+        font-size: clamp(16px, 5vw, 24px);
     }
 }
