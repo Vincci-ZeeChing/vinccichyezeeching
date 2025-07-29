@@ -1,0 +1,50 @@
+
+.aboutPage {
+    text-align: left;
+    max-width: 900px;
+    margin: 5vh;
+}
+
+.expert,
+.textCard {
+    margin: 0;
+    padding: 0;
+    line-height: 1.1; /* Optional: controls vertical space between lines */
+}
+
+.expert {
+    font-weight: 200;
+    font-size: 50px;
+}
+
+.textCard {
+    font-weight: 900;
+    font-size: 70px;
+    color: #1E82A6;
+}
+
+.content {
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: justify;
+    margin-top: 10vh;
+}
+
+.buttonContainer {
+    text-align: right;
+}
+.button {
+    margin-top: 2rem;
+    width: 250px;
+    height: 60px;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 20px;
+    color: #fff;
+    background-color: #1E82A6;
+    border: none;
+    cursor: pointer;
+    margin-right: 5vw;
+    margin-bottom: 2vh;
+}
