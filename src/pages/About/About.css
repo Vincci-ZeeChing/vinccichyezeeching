@@ -1,8 +1,8 @@
 .aboutPage {
     text-align: left;
     max-width: 900px;
-    margin: 5vh;
     padding: 0 5vw;
+    margin: 10vh 3vh;
 }
 
 .expert,
@@ -15,6 +15,32 @@
 .expert {
     font-weight: 200;
     font-size: clamp(28px, 5vw, 50px);
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: inline-block;
+}
+
+.y-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.svg-icon svg {
+    width: 1.5em;
+    height: auto;
+    display: block;
+}
+
+.svg-icon {
+    position: absolute;
+    top: -1em; /* Controls vertical position (upward) */
+    left: -3vw; /* Shifts it left to align with top-left of "Y" */
+    width: 1.5em; /* Scales with font size */
+    height: auto;
+    display: block;
+    pointer-events: none;
 }
 
 .textCard {
@@ -48,4 +74,15 @@
     cursor: pointer;
     margin-right: 3vw;
     margin-bottom: 2vh;
+}
+
+@media (max-width: 520px) {
+    .svg-icon {
+        left: -5vw;
+    }
+}
+@media (max-width: 400px) {
+    .svg-icon {
+        display: none;
+    }
 }
