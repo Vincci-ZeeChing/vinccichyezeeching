@@ -1,50 +1,51 @@
-
 .aboutPage {
     text-align: left;
     max-width: 900px;
     margin: 5vh;
+    padding: 0 5vw;
 }
 
 .expert,
 .textCard {
     margin: 0;
     padding: 0;
-    line-height: 1.1; /* Optional: controls vertical space between lines */
+    line-height: 1.1;
 }
 
 .expert {
     font-weight: 200;
-    font-size: 50px;
+    font-size: clamp(28px, 5vw, 50px);
 }
 
 .textCard {
     font-weight: 900;
-    font-size: 70px;
+    font-size: clamp(36px, 7vw, 70px);
     color: #1E82A6;
 }
 
 .content {
     font-weight: 300;
-    font-size: 30px;
-    line-height: 40px;
+    font-size: clamp(18px, 3vw, 30px);
+    line-height: 1.5;
     text-align: justify;
-    margin-top: 10vh;
+    margin-top: 5vh;
 }
 
 .buttonContainer {
     text-align: right;
 }
+
 .button {
     margin-top: 2rem;
-    width: 250px;
+    width: clamp(180px, 40vw, 250px);
     height: 60px;
     border-radius: 100px;
     font-weight: 700;
-    font-size: 20px;
+    font-size: clamp(14px, 2.5vw, 20px);
     color: #fff;
     background-color: #1E82A6;
     border: none;
     cursor: pointer;
-    margin-right: 5vw;
+    margin-right: 3vw;
     margin-bottom: 2vh;
 }
